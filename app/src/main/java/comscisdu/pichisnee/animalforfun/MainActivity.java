@@ -3,10 +3,12 @@ package comscisdu.pichisnee.animalforfun;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,5 +42,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-}
+    }//end method onCreate()
+
+    public void clickFB(View view) {
+        Intent fbIntent = new Intent(Intent.ACTION_VIEW);
+        fbIntent.setData(Uri.parse("https://www.facebook.com/Aj.Aom"));
+        startActivity(fbIntent);
+    }// end method clickFB()
+}// end Class
